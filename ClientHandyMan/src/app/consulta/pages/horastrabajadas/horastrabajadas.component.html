@@ -1,0 +1,42 @@
+<form autocomplete="off">
+    <div class="flex flex-column">
+            <span class="p-float-label m-3">
+                <input 
+                id="float-input"
+                type="text" 
+                name="idTech"
+                class="form-control"
+                [(ngModel)]="idTech"
+                pInputText> 
+                <label for="float-input" class="text-purple-100">Número de identificación</label>
+            </span>        
+    
+        <span class="p-float-label m-3">
+            <input 
+            id="float-input" 
+            type="text"
+            name="numweek"
+            class="form-control"
+            [(ngModel)]="numweek"
+            pInputText> 
+            <label for="float-input" class="text-purple-100">Semana del año</label>
+        </span>
+        <button 
+            pButton pRipple type="button" 
+            label="Consultar" 
+            (click)="senddatas()"
+            class="p-button-help m-3">
+        </button>  
+    </div>
+    <div class="resultados" *ngIf="show;">
+        <h5>El técnico {{datos.idTech}} realizó:</h5>
+        <h5>{{datos.normalHours}} horas normales,</h5> 
+        <h5>{{datos.nocturneHours}} horas nocturnas,</h5> 
+        <h5>{{datos.sundayHours}} horas dominicales,</h5> 
+        <h5>{{datos.extraNormalHours}} horas extras Normales</h5>
+        <h5>{{datos.extraNocturneHours}} horas extras Nocturas</h5>
+        <h5>{{datos.extraSundayHours}} horas extras Dominicales</h5>
+    </div>
+        
+</form>
+

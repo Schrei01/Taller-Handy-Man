@@ -1,0 +1,18 @@
+body{
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.izquierda{
+    background: #8540ec;
+    width: 50%;
+    height: 84vh;
+}
+
+.derecha{
+    background: url(src\assets\fondo.png);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 84vh;
+}

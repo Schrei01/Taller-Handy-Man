@@ -1,0 +1,49 @@
+<form action="">
+    <div class="flex flex-column">
+        <span class="p-float-label m-3">
+            <input 
+                id="float-input" 
+                type="text"
+                name="idServ"
+                class="form-control"
+                [(ngModel)]="report.idServ"
+                pInputText> 
+            <label for="float-input" class="text-purple-100">Número del servicio</label>
+        </span>
+        <span class="p-float-label m-3">
+            <input 
+                id="float-input" 
+                type="text"
+                name="idTech"
+                class="form-control"
+                [(ngModel)]="report.idTechnician"
+                pInputText> 
+            <label for="float-input" class="text-purple-100">Número de identificación</label>
+        </span>
+        <span class="p-float-label m-3">
+            <p-calendar 
+                dateFormat="dd.mm.yy" [showTime]="true" hourFormat="24"
+                name="initDate"
+                class="form-control"
+                [(ngModel)]="report.initDate">
+            </p-calendar>
+            <label for="float-input" class="text-purple-100">Fecha y hora de inicio</label>
+        </span>
+        <span class="p-float-label m-3">
+            <p-calendar 
+                dateFormat="dd.mm.yy" [showTime]="true" hourFormat="24"
+                name="endDate"
+                class="form-control"
+                [(ngModel)]="report.endDate">
+            </p-calendar>
+            <label for="float-input" class="text-purple-100">Fecha y hora de fin</label>
+        </span>
+        <button 
+            pButton pRipple type="button" 
+            label="Registrar" 
+            class="p-button-help m-3"
+            (click)="sendReport(report)">
+        </button>
+    </div>
+</form>
+    
